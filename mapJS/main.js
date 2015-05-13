@@ -23,7 +23,8 @@ var Dots = Backbone.Collection.extend({
 
 	model:Dot,
 	url: function(){
-		return "http://127.0.0.1/scatter/" + this.dbTable;
+		// return "http://127.0.0.1/scatter/" + this.dbTable;
+		return "http://127.0.0.1/scatter/mapJS/data/pathway_final.json";
     // return "http://www.maayanlab.net/temp/mapdb/pathwayServer/" + this.dbTable;
 	},
 
