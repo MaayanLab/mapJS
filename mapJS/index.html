@@ -1,0 +1,55 @@
+<html>
+<title>
+MapJS
+</title>
+<head>
+<LINK href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css"></LINK>
+ <LINK href="css/style_main.css" rel="stylesheet" type="text/css"></LINK>
+ 
+
+ <script src="JS/jquery-2.0.3.min.js" ></script>
+ <script src="JS/jquery-ui.js"></script>
+ <script src="JS/d3.v3.min.js" charset="utf-8"></script>
+ <script src="JS/underscore-min.js" ></script>
+ <script src="JS/backbone-min.js" ></script>
+ <script type="text/javascript" src="JS/jscolor/jscolor.js"></script>
+
+</head>
+<body>
+
+<div id="wrap">
+<input id = 'searchBox' placeholder="Type to search pathways" />
+	<div id = 'selectionPanel'>
+	<!-- <div class='selectionBar' pathways='<ul><% _.each(autoCompleteOptions, function(option) { %> <li><%= option %></li> <% }); %> </ul>'>
+		<div id='test' class='selectionBarText'>long term</div>
+		<div class='destroy'></div>
+	</div> -->
+	</div>
+<div id='stage'></div>
+
+<div id='below'>
+<!-- <a id="svgDownload">SVG</a> -->
+<div style='display:default'><span style="color:#ff9900">GO</span>, <span style="color:#cc3300">Wikipathway</span>, <span style="color:#7fcc32">KEGG</span></div>
+</div>
+
+</div> 
+<!-- wrap div -->
+
+
+<!-- Templates -->
+<script type="text/template" id="selectionBar-template">
+	<div class='selectionBar' pathways='<span class="tooltipSpan"><%= term %></span><ul class="tooltipUl"><% _.each(autoCompleteOptions, function(option) { %> <li><%= option %></li> <% }); %> </ul>'>
+		<div class='selectionBarText'><%= trimmedTerm %></div>
+		<div class='destroy'></div>
+	</div>
+</script>
+
+<!-- ColorPicker UI -->
+<input style="display:none" id = 'colorPickerInput' class='color' />
+<button id='colorPickerButton' style='position:absolute'> OK </button>
+</body>
+
+<script src="SelectionPanel.js"></script>
+<script src="colorpick.js"></script>
+<script src="main.js" ></script>
+</html>

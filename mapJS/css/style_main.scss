@@ -1,0 +1,154 @@
+$grey-color:#656468;
+$stageWidth : 600px;
+$menuBackgroundColor: rgba(0,0,0,0.5);
+$fontWhite: white;
+
+
+
+body{
+	background-color:black;
+	text-align:center;
+	color:white;
+	padding-top: 20;
+	/*font-size:0px;*/
+}
+
+#wrap {
+	width: $stageWidth+5;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.svgBorder{
+	border-style: solid;
+	border-color: $grey-color;
+	/*border-color: white;*/
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+text{
+	cursor:default;
+}
+
+.highlight{
+	fill: none;
+	stroke: rgb(73, 176, 201);
+	stroke-width: 2;
+	/*stroke-opacity:0.5;*/
+	pointer-events: none; 
+}
+
+#searchBox{
+	width: $stageWidth + 4.8;
+	background-color:#465257;
+	color:azure;
+	border-color:$grey-color;
+	/*border-color: azure;*/
+	border-width:1px;
+	padding-top: 2px;
+	text-align: center;
+	padding-bottom: 2px;
+	border-style: solid;
+	margin-bottom: 0.5px;
+}
+
+.custom-autocomplete-ul{
+	background-color: $menuBackgroundColor;
+	color:$fontWhite;
+	font-size:0.6em;
+}
+
+a {
+	text-decoration: underline;
+	cursor: pointer;
+	color: $grey-color;
+}
+
+#below{
+	margin-top: 10px;
+}
+
+
+#selectionPanel{
+	text-align:left;
+	font-size: 0
+}
+
+$selectionBarWidth : $stageWidth/4 + 1.2;
+$selectionBarheight : 18px;
+$destroyImgSize : 13px;
+
+
+
+.selectionBar{
+	background-color: rgb(73, 176, 201);
+	height:$selectionBarheight;
+	width: $selectionBarWidth;
+	display: inline-block;
+	text-align: left;
+	font-size: 0px;
+}
+
+.selectionBarText{
+	width:$selectionBarWidth - $destroyImgSize - 2;
+	height:$selectionBarheight;
+	display:inline-block;
+	text-align: center;
+	font-size: 15px;
+	cursor:default;
+}
+
+
+
+
+.destroy {
+	position:relative;
+	top: 2px;
+	display: none;
+	cursor: pointer;
+	width: $destroyImgSize;
+	height: $destroyImgSize;
+	background: url(img/destroy.png) no-repeat;
+	background-size: 100%;
+}
+
+.selectionBar:hover .destroy{
+	display:inline-block;
+}
+
+
+$destroyImgMoveSize : 0 - $destroyImgSize;
+.destroy:hover {
+  	background-position: 0 $destroyImgMoveSize;
+}
+
+
+.tooltipSpan {
+	margin:0;
+	font-style: bold;
+	color:white;
+}
+
+.tooltipUl {
+	margin:0;
+	font-size:0.6em;
+	text-align:left;
+	padding-left:1.5em;
+	color:white;
+}
+
+.custom-ui-tooltip {
+	background-color:$menuBackgroundColor;
+}
+
+#colorPickerButton {
+	position: absolute;
+	top:121;
+	left:187.5;
+	width:50;
+	display:none;
+}

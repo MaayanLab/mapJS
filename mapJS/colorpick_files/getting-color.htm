@@ -1,0 +1,26 @@
+
+<!-- saved from url=(0045)http://jscolor.com/example/getting-color.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>getting-color (example)</title>
+</head>
+<body>
+
+
+<script type="text/javascript" src="jscolor.js"></script>
+
+R<input id="red" size="5">  G<input id="grn" size="5">  B<input id="blu" size="5">  - - -
+H<input id="hue" size="5">  S<input id="sat" size="5">  V<input id="val" size="5">
+
+<p> Choose any color: <input class="color" id="myColor" onchange="
+	document.getElementById(&#39;red&#39;).value = this.color.rgb[0]*100 + &#39;%&#39;;
+	document.getElementById(&#39;grn&#39;).value = this.color.rgb[1]*100 + &#39;%&#39;;
+	document.getElementById(&#39;blu&#39;).value = this.color.rgb[2]*100 + &#39;%&#39;;
+	document.getElementById(&#39;hue&#39;).value = this.color.hsv[0]* 60 + &#39;°&#39;;
+	document.getElementById(&#39;sat&#39;).value = this.color.hsv[1]*100 + &#39;%&#39;;
+	document.getElementById(&#39;val&#39;).value = this.color.hsv[2]*100 + &#39;%&#39;;" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+
+
+
+
+</p></body></html>

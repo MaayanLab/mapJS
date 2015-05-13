@@ -1,0 +1,3 @@
+1.add regex search
+2. add gene enrichment
+3. add different highlight shapes like triangles and diamonds.
